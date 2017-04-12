@@ -14,6 +14,7 @@ AlbumList.prototype = {
         var jsonString = request.responseText;
         var albumsFromJSON = JSON.parse(jsonString);
         this.albums = albumsFromJSON.albums.items;
+        console.log(this.albums)
         this.display();
     }.bind(this);
     
@@ -34,6 +35,9 @@ AlbumList.prototype = {
       var albumDiv = document.createElement('div');
       albumDiv.classList.add('album');
       var albumCover = document.createElement('img');
+      albumCover.onclick = function(){
+        window.location.href= album.external_urls.spotify;
+      }
       var albumTitle = document.createElement('p');
       var albumArtist = document.createElement('p');
 
