@@ -1,3 +1,11 @@
+body{
+  background-color: black;
+}
+
+h2{
+  color: white;
+}
+
 main{
   width: 300px;
   margin: 0 auto;
@@ -11,7 +19,29 @@ input{
   margin: 10px;
 }
 
+#albums{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .album{
+  background-color: white;
+  border: 1px solid black;
+  flex-basis: 10rem;
   padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
